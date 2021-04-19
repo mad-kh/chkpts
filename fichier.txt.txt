@@ -1,0 +1,207 @@
+
+ALGORITHM Problem_1
+VAR
+set1:ARRAY _of integer [N1];
+set2:ARRAY_of integer [N2];
+set_dist:=ARRAY_of integer [10];
+sum:integer:=0;
+k,i,j:integer;
+existe : boolean;
+c:integer:=0;
+
+BEGIN
+
+write (" give the lengths of the two tables");
+read(N1);
+red(N2);
+FOR i FROM 0 to N1-1 DO
+write ("the elements of set1");
+read(set[i]);
+END_FOR
+
+FOR j FROM 0 to N2-1 DO 
+write ("the elemnts of set2");
+read(set2[j]);
+END_FOR
+
+i:=0;
+repeat
+existe := false;
+
+FOR j FROM 0 to N2-1 DO 
+if set1[i]=set2[j]then
+existe:=true;
+
+else if existe =false then
+set_dist[c]:=set1[i];
+c:=c+1;
+end_if
+end_else_if
+END_FOR
+
+sum:=sum+set_dist[c];
+
+
+ i:=i+1;
+until (i>=N2-1 or i>N1-1)
+
+ write(sum);
+for k from 0 to c-1 do
+write (set_dist[k]);
+end_for
+
+END.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ALGORITHM Problem_1
+
+VAR
+   
+   htab : HASH_TABLE<integer,integer>;
+  
+   set1 : ARRAY_of integer[N1];
+existe:boolean;
+   set2 : ARRAY_of integer[N2];
+set_dist:ARRAY_of integer[];
+   i,j,k : INTEGER;
+c:integer:=0;
+   sum:integer:=0;
+BEGIN
+read(N1);
+read(N2);
+
+
+For i FROM 0 to N1-1 DO
+   Read(set1[i]);
+END_FOR
+FOR j FROM 0 to N2-1 DO
+read (set2[j]) ;
+END_FOR
+
+   
+i:=0;
+repeat
+existe:=false;
+FOR j FROM 0 to N2-1 DO
+       IF (htab.lookup(set1[i]) <>set2[j]) THEN
+           
+           existe
+END_IF
+      else if htab.insert[set1[i],false]
+set_dist[c]:=set1[i];
+c:=c+1;
+
+END_FOR
+sum:=sum+set_dist[c];
+i:=i+1;
+UNTIL(i>=N2-1 or i>=N1-1)
+write (sum);
+for k from 0 to c-1 do 
+write (set_dist[k])
+
+end_for
+END.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+ALGORITHM Problem_2
+
+VAR
+   
+   htab : HASH_TABLE<integer,integer>;
+BEGIN
+  
+   set1 : ARRAY_of integer[N1];
+
+   set2 : ARRAY_of integer[N2];
+set:ARRAY_of integer [c];
+   i,j,k: INTEGER;
+c:integer:=0;
+   sum:integer:=0;
+existe:boolean;
+BEGIN
+read(N1);
+read(N2);
+For i FROM 0 to N1-1 DO
+   Read(set1[i]);
+END_FOR
+FOR j FROM 0 to N2-1 DO
+read (set2[j]) ;
+END_FOR
+
+   
+i:=0;
+j:=0;
+repeat
+existe:true;
+       IF (htab.lookup(set1[i]) <>set2[j]) THEN
+           existe:=false;
+
+       ELSE  
+existe:=true ;
+set[c]:=set1[i];
+c:=c+1;
+END_IF
+End_else
+ i:=i+1;
+for k from 0 to c-1 do
+sum:=sum+set[K];
+until (j>=N1-1 or j>=N2-1)
+
+
+
+END.
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ALGORITHM Problem_2
+
+
+VAR
+  existe:boolean;
+   set1 : ARRAY_of integer[N1];
+
+   set2 : ARRAY_of integer[N2];
+set:ARRAY_of integer [];
+  j,k, i,count : INTEGER;
+   sum:integer:=0;
+BEGIN
+read(N1);
+read(N2);
+For i FROM 0 to N1-1 DO
+   Read(set1[i]);
+END_FOR
+FOR j FROM 0 to N2-1 DO
+read (set2[j]) ;
+END_FOR
+
+   
+i:=0;
+j:=0;
+repeat
+
+existe:=true;
+     if  set1[i]) <>set2[j] THEN
+           
+           existe:=false;
+else existe :=true;
+set[c]:=set1[i];
+c:=c+1;
+END_IF
+End_else
+
+i:=i+1;
+
+for k from 0 to c-1 do
+sum:=sum+set[K];
+end_do
+until (j>=N2-1 or j>=N1-1)
+
+write(sum);
+for k from 0 to c-1 do
+write(set[k]);
+end_do
+
+END.
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
